@@ -66,6 +66,10 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .section.dark{background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));color:#fff}
 /* ensure section text panels have subtle backing to avoid poor contrast when gradient changes */
 .section .container{background:linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.00));padding:0}
+/* difference section: make a distinct dark-blue band above the cards so the paragraph sits on a consistent dark background */
+.section#difference{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px}
+.section#difference .container{padding-top:8px;padding-bottom:8px}
+.section#difference p{color:rgba(255,255,255,0.96);line-height:1.6}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
 .card{background:rgba(255,255,255,0.96);padding:28px;border-radius:12px;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08)}
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
