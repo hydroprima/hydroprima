@@ -39,6 +39,8 @@ body::before{
 .brand{display:flex;align-items:center;gap:18px}
 .logo-wrap{display:flex;align-items:center;justify-content:center}
 .logo{width:160px;height:auto;opacity:0.92;filter:drop-shadow(0 10px 28px rgba(2,10,18,0.25));transform:translateY(2px)}
+/* center the company name and tagline vertically under each other */
+.brand-text{display:flex;flex-direction:column;align-items:center;text-align:center}
 .company{font-weight:700;letter-spacing:.08em;color:#fff;font-size:20px}
 .tagline{font-size:13px;color:var(--muted);letter-spacing:.09em;margin-top:6px}
 .topnav{display:flex;align-items:center;gap:18px}
