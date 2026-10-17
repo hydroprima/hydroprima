@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="360" height="360" viewBox="0 0 360 360" role="img" aria-labelledby="logoTitle">
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-labelledby="logoTitle">
   <title id="logoTitle">HYDROPRIMA logo — two overlapping drops</title>
   <defs>
     <linearGradient id="lg-top" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#053249" stop-opacity="1" />
-      <stop offset="100%" stop-color="#0b4a63" stop-opacity="1" />
+      <stop offset="0%" stop-color="#053249" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0b4a63" stop-opacity="0.95" />
     </linearGradient>
     <linearGradient id="lg-bottom" x1="0" x2="0" y1="0" y2="1">
-      <stop offset="0%" stop-color="#dff8fb" stop-opacity="1" />
-      <stop offset="100%" stop-color="#eafcff" stop-opacity="1" />
+      <stop offset="0%" stop-color="#dff8fb" stop-opacity="0.98" />
+      <stop offset="100%" stop-color="#eafcff" stop-opacity="0.98" />
     </linearGradient>
     <filter id="f1" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-color="#02121a" flood-opacity="0.18"/>
+      <feDropShadow dx="0" dy="10" stdDeviation="22" flood-color="#02121a" flood-opacity="0.18"/>
     </filter>
   </defs>
 
-  <!-- Top drop: larger, darker, elegant curve -->
-  <path d="M180 24c26 0 63 56 63 94 0 52-50 98-63 118-13-20-63-66-63-118 0-38 37-94 63-94z" fill="url(#lg-top)" filter="url(#f1)"/>
+  <!-- Top drop: larger, darker, elegant curve, slightly transparent to match request -->
+  <path d="M240 24c34 0 82 72 82 120 0 66-64 124-82 150-18-26-82-84-82-150 0-48 48-120 82-120z" fill="url(#lg-top)" filter="url(#f1)" opacity="0.94"/>
 
   <!-- Bottom drop: smaller, lighter, overlapping -> represents purified water -->
-  <path d="M210 118c16 0 40 34 40 56 0 30-28 58-40 70-10-12-40-40-40-70 0-22 24-56 40-56z" fill="url(#lg-bottom)" opacity="0.98"/>
+  <path d="M275 128c20 0 50 44 50 72 0 38-42 74-50 90-13-16-50-54-50-90 0-28 30-72 50-72z" fill="url(#lg-bottom)" opacity="0.96"/>
 
   <!-- subtle overlap highlight -->
-  <path d="M195 115c6 2 32 18 42 36" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2" stroke-linecap="round" />
+  <path d="M255 125c8 2 42 22 55 44" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2.4" stroke-linecap="round" />
 </svg>

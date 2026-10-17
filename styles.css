@@ -1,4 +1,4 @@
-/* styles.css - refined premium styling with blue background gradient */
+/* styles.css - refined premium styling with blue background gradient and large background drops */
 :root{
   --max:1100px;
   --accent:#0b2a3a; /* used for CTAs */
@@ -15,24 +15,43 @@ body{
   background: linear-gradient(180deg, #001428 0%, #0b3a57 30%, #cfeff7 100%);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  position:relative;
+  overflow-x:hidden;
 }
-.container{max-width:var(--max);margin:0 auto;padding:0 24px}
-.site-header{display:flex;align-items:center;justify-content:space-between;padding:28px 24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);}
+/* large decorative background drops (subtle, behind content) */
+body::before{
+  content:"";
+  position:fixed;
+  left:-6vw;
+  top:-10vh;
+  width:80vw;
+  height:120vh;
+  background-image:url('assets/bg-drops.svg');
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size:contain;
+  opacity:0.10;
+  pointer-events:none;
+  z-index:0;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:28px 24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);position:relative;z-index:3}
 .brand{display:flex;align-items:center;gap:18px}
-.logo{width:96px;height:auto;filter:drop-shadow(0 6px 18px rgba(2,10,18,0.25))}
-.company{font-weight:700;letter-spacing:.08em;color:#fff;font-size:18px}
-.tagline{font-size:13px;color:var(--muted);letter-spacing:.09em}
+.logo-wrap{display:flex;align-items:center;justify-content:center}
+.logo{width:140px;height:auto;opacity:0.9;filter:drop-shadow(0 8px 26px rgba(2,10,18,0.22));transform:translateY(2px)}
+.company{font-weight:700;letter-spacing:.08em;color:#fff;font-size:20px}
+.tagline{font-size:13px;color:var(--muted);letter-spacing:.09em;margin-top:4px}
 .topnav{display:flex;align-items:center;gap:18px}
 .topnav a{color:rgba(255,255,255,0.95);text-decoration:none;font-size:14px}
 .lang-selector{margin-left:12px}
 .lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:6px 8px;border-radius:6px;margin-left:6px;color:#fff;cursor:pointer}
-.hero{padding:92px 0}
+.hero{padding:92px 0;position:relative;z-index:2}
 .hero-inner{max-width:900px;margin:0 auto;padding:0 24px}
 h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700}
 .lead{color:rgba(255,255,255,0.9);font-size:18px;margin:0 0 20px}
 .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:transparent;color:#fff;text-decoration:none}
 .btn.primary{background:rgba(255,255,255,0.12);backdrop-filter:blur(6px);border:none}
-.section{padding:56px 0}
+.section{padding:56px 0;position:relative;z-index:2}
 .section.dark{background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));color:#fff}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
 .card{background:rgba(255,255,255,0.96);padding:28px;border-radius:12px;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08)}
@@ -41,5 +60,5 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700}
 .contact-form{margin-top:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
 input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06);border-radius:8px}
-.site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85)}
-@media (max-width:760px){.topnav{display:none}.logo{width:80px}}
+.site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
+@media (max-width:760px){.topnav{display:none}.logo{width:110px}}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="bgTitle">
+  <title id="bgTitle">Background decorative drops for HYDROPRIMA</title>
+  <defs>
+    <linearGradient id="bg-dark" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#001428" stop-opacity="1" />
+      <stop offset="100%" stop-color="#0b3a57" stop-opacity="1" />
+    </linearGradient>
+    <linearGradient id="bg-light" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dff8fb" stop-opacity="1" />
+      <stop offset="100%" stop-color="#eafcff" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Very large dark drop (left, partially off-canvas) -->
+  <path d="M-100 -50c120 0 300 260 300 420 0 230-240 430-300 520-60-90-300-290-300-520 0-160 180-420 300-420z" fill="url(#bg-dark)" opacity="0.12"/>
+
+  <!-- Very large light drop (slightly right and lower) -->
+  <path d="M300 120c90 0 200 180 200 290 0 160-160 300-200 360-45-60-200-200-200-360 0-110 110-290 200-290z" fill="url(#bg-light)" opacity="0.10"/>
+</svg>
