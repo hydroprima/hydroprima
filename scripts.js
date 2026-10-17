@@ -1,4 +1,4 @@
-// scripts.js - simple client-side translations and language selector
+// scripts.js - updated translations including tagline
 const translations = {
   en: {
     'nav.home': 'HOME',
@@ -7,6 +7,7 @@ const translations = {
     'nav.industries': 'INDUSTRIES',
     'nav.about': 'ABOUT',
     'nav.contact': 'CONTACT',
+    'tagline': 'Pure, sustainable perfection.',
     'hero.title': 'Premium Water. Exceptional Service.',
     'hero.sub': 'Professional water filtration and dispensing solutions for hospitality and premium environments.',
     'cta.request': 'REQUEST A CONSULTATION',
@@ -44,6 +45,7 @@ const translations = {
     'nav.industries': 'INDUSTRIAS',
     'nav.about': 'SOBRE NOSOTROS',
     'nav.contact': 'CONTACTO',
+    'tagline': 'Pura. Perfección sostenible.',
     'hero.title': 'Agua premium. Servicio excepcional.',
     'hero.sub': 'Soluciones profesionales de filtración y dispensación de agua para entornos hoteleros y premium.',
     'cta.request': 'SOLICITAR UNA CONSULTA',
@@ -81,6 +83,7 @@ const translations = {
     'nav.industries': 'BRANCHEN',
     'nav.about': 'ÜBER UNS',
     'nav.contact': 'KONTAKT',
+    'tagline': 'Rein. Nachhaltige Perfektion.',
     'hero.title': 'Premium Wasser. Außergewöhnlicher Service.',
     'hero.sub': 'Professionelle Lösungen zur Wasserfiltration und -ausgabe für Hotellerie und Premium-Umgebungen.',
     'cta.request': 'BERATUNG ANFRAGEN',
