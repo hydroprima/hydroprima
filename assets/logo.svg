@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="logoTitle">
+  <title id="logoTitle">HYDROPRIMA logo — two overlapping drops</title>
+  <defs>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b2a3a" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0b2a3a" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#cfeef7" stop-opacity="1" />
+      <stop offset="100%" stop-color="#eaf9fc" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+  <!-- Top drop: slightly larger and darker -->
+  <path d="M120 8c16 0 40 36 40 60 0 34-32 64-40 76-8-12-40-42-40-76 0-24 24-60 40-60z" fill="url(#g1)"/>
+  <!-- Bottom drop: smaller, lighter, slightly lower and overlapping -->
+  <path d="M135 78c11 0 28 24 28 40 0 22-20 42-28 50-7-8-28-28-28-50 0-16 17-40 28-40z" fill="url(#g2)" opacity="0.95"/>
+</svg>
