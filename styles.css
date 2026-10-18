@@ -76,13 +76,21 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .section#service h2{color:rgba(255,255,255,0.98)}
 .section#service .feature h4{color:rgba(255,255,255,0.96);margin:0 0 6px}
 .section#service .feature p{color:rgba(255,255,255,0.90);line-height:1.6}
-/* keep cards (solutions) visually distinct and white to preserve hierarchy */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:18px}
-.card{background:rgba(255,255,255,0.96);padding:28px;border-radius:12px;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08)}
+
+/* Solution cards with photo header and visible black CTAs */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
+.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;min-height:420px}
+.card-photo{height:180px;background-size:cover;background-position:center;flex:0 0 auto}
+.card-content{padding:20px;display:flex;flex-direction:column;gap:12px;flex:1 1 auto}
+.card-content h3{margin:0;color:#042028;font-size:1.4rem}
+.card-content p{margin:0;color:#153233;line-height:1.5;font-size:0.96rem}
+.btn.discover{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700;align-self:flex-start}
+
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
 .feature{background:transparent;color:rgba(255,255,255,0.95)}
 .contact-form{margin-top:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
 input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06);border-radius:8px}
 .site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
-@media (max-width:760px){.topnav{display:none}.logo{width:130px}}
+@media (max-width:760px){.topnav{display:none}.logo{width:130px}.card-photo{height:150px}}
+@media (max-width:480px){.card-photo{height:120px}.card{min-height:360px}}
