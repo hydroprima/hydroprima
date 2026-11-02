@@ -78,21 +78,27 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .section#service .feature p{color:rgba(255,255,255,0.90);line-height:1.6}
 
 /* Solution cards with photo header and visible black CTAs */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px}
-.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;/* remove fixed min-height so content sits at top */}
-.card-photo{height:200px;background-size:cover;background-position:center;flex:0 0 auto}
-.card-content{padding:20px;display:block;/* no flex grow so content stays at top */}
-.card-content h3{margin:0;color:#042028;font-size:1.4rem}
-.card-content p{margin:12px 0 0;color:#153233;line-height:1.5;font-size:0.96rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px;align-items:stretch}
+.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;height:100%;min-height:360px}
+.card-photo{height:180px;background-size:cover;background-position:center;flex:0 0 auto}
+.card-content{padding:18px 20px 16px;display:flex;flex-direction:column;flex:1}
+.card-content h3{margin:0 0 10px;color:#042028;font-size:1.42rem;line-height:1.2;min-height:2.6em;display:flex;align-items:center}
+.card-content p{margin:0 0 14px;color:#153233;line-height:1.5;font-size:0.96rem;flex:1;display:flex;align-items:flex-start}
 
 /* Option buttons for Water Dispensers (explicit black text) */
 .card .btn.option{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:9px 12px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin-right:8px}
 
 /* Discover button kept for other cards */
-.card .btn.discover{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700}
+.card .btn.discover{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700;margin-top:auto}
 
 /* ensure buttons are fully opaque and visible even if global .btn sets color */
 .card .btn{opacity:1}
+
+/* homogeneous formatting for the three cards */
+.card .options{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.card .options .btn{margin-right:0}
+.card .btn.discover,
+.card .btn.option{align-self:flex-start}
 
 /* --- Contact block vertical position tweak --- */
 .contact-container{padding-top:96px;padding-bottom:48px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
@@ -106,4 +112,5 @@ input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06
 .site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
 @media (max-width:960px){.card-photo{height:180px}.contact-container{padding-top:64px}}
 @media (max-width:760px){.topnav{display:none}.logo{width:130px}.card-photo{height:150px}.contact-container{padding-top:48px}}
-@media (max-width:480px){.card-photo{height:120px}.card{min-height:360px}}
+@media (max-width:480px){.card-photo{height:120px}.card{min-height:320px}}
+
