@@ -112,6 +112,33 @@ function applyTranslations(lang = currentLang) {
   });
 }
 
+function sendFormToEmail() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const formData = new FormData(form);
+  const first = (formData.get('first') || '').toString().trim();
+  const last = (formData.get('last') || '').toString().trim();
+  const company = (formData.get('company') || '').toString().trim();
+  const position = (formData.get('position') || '').toString().trim();
+  const country = (formData.get('country') || '').toString().trim();
+  const email = (formData.get('email') || '').toString().trim();
+  const message = (formData.get('message') || '').toString().trim();
+
+  const subject = encodeURIComponent('Consultation request from ' + (first || 'New customer'));
+  const body = encodeURIComponent(
+    'First name: ' + first + '\n' +
+    'Last name: ' + last + '\n' +
+    'Company: ' + company + '\n' +
+    'Position: ' + position + '\n' +
+    'Country: ' + country + '\n' +
+    'Email: ' + email + '\n\n' +
+    'Message:\n' + message
+  );
+
+  window.location.href = 'mailto:info@hydroprima.com?subject=' + subject + '&body=' + body;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   applyTranslations();
 
