@@ -1,4 +1,3 @@
-// scripts.js - update exact phrases as requested (EN/ES/DE)
 const translations = {
   en: {
     'nav.home': 'HOME',
@@ -9,28 +8,19 @@ const translations = {
     'nav.contact': 'CONTACT',
     'tagline': 'Water. Elevated.',
     'hero.title': 'Pure, sustainable perfection.',
-    'hero.sub': 'Tailored water filtration and premium dispensing solutions for the HORECA industry',
+    'hero.sub': 'Tailored water filtration and premium dispensing solutions for the HORECA industry.',
     'cta.request': 'REQUEST A CONSULTATION',
     'cta.explore': 'EXPLORE OUR SOLUTIONS',
     'difference.title': 'The difference is service',
-    'difference.text': 'HYDROPRIMA combines premium equipment from trusted partners with a specialist service network to keep operations running. Every inquiry receives a timely response. We take care of your water while you take care of your guests.',
+    'difference.text': 'HYDROPRIMA combines premium equipment from trusted partners with a specialist service network to keep operations running. Every inquiry receives a timely response.',
     'solutions.title': 'Solutions designed around your operation',
-    'solutions.purchase': 'PURCHASE',
-    'solutions.purchase_text': 'Own your equipment. Long-term investment with professional support.',
-    'solutions.rental': 'RENTAL',
-    'solutions.rental_text': 'Premium equipment with predictable monthly costs.',
-    'solutions.bottles': 'BOTTLES',
-    'solutions.bottles_text': 'Reusable glass bottles personalised for your brand.',
-    'solutions.cta': 'DISCOVER PURCHASE',
-    'solutions.cta2': 'DISCOVER RENTAL',
-    'solutions.cta3': 'DISCOVER BOTTLES',
     'service.title': 'Service is not an option. It is part of the solution.',
     'service.fast': 'EXPEDITED RESPONSE',
     'service.fast_text': 'Every inquiry receives a timely response. We take care of your water while you take care of your guests.',
     'service.network': 'SPECIALIST NETWORK',
     'service.network_text': 'Qualified technical specialists across the United States, Spain and Germany.',
     'service.maintenance': 'MAINTENANCE',
-    'service.maintenance_text': 'Preventive and corrective maintenance to protect equipment performance.',
+    'service.maintenance_text': 'Preventative and corrective maintenance to protect equipment performance.',
     'about.title': 'Built around expertise. Designed around service.',
     'about.text': 'HYDROPRIMA is an international distributor of professional water filtration and dispensing equipment from selected technology partners such as Blupura. We specialise in premium hospitality and commercial environments, offering installation, parts and expert ongoing support.',
     'contact.title': "Let's review how we can work together to elevate your hydration needs for your guests and staff",
@@ -69,75 +59,66 @@ const translations = {
     'service.network_text': 'Especialistas técnicos cualificados en Estados Unidos, España y Alemania.',
     'service.maintenance': 'MANTENIMIENTO',
     'service.maintenance_text': 'Mantenimiento preventivo y correctivo para proteger el rendimiento del equipo.',
-    'about.title': 'Creado alrededor de la experiencia. Diseñado alrededor del servicio.',
-    'about.text': 'HYDROPRIMA es un distribuidor internacional de equipos profesionales de filtración y dispensación de agua de socios tecnológicos seleccionados como Blupura. Nos especializamos en entornos hoteleros y comerciales premium, ofreciendo instalación, recambios y soporte experto continuo.',
-    'contact.title': 'Analicemos cómo podemos colaborar para elevar sus necesidades de hidratación para sus huéspedes y el personal.',
-    'contact.sub': 'Cuéntenos sobre su negocio y nuestro equipo le responderá en menos de 24 horas.',
+    'about.title': 'Diseñado alrededor de la experiencia. Construido alrededor del servicio.',
+    'about.text': 'HYDROPRIMA es un distribuidor internacional de equipos profesionales de filtración y dispensación de agua de socios tecnológicos seleccionados. Especializamos soluciones para entornos hoteleros y comerciales premium.',
+    'contact.title': 'Revisemos cómo podemos trabajar juntos para elevar sus necesidades de hidratación para sus huéspedes y personal',
+    'contact.sub': 'Cuéntenos sobre su negocio y nuestro equipo le responderá en 24 horas.',
     'contact.cta': 'SOLICITAR UNA CONSULTA',
-    'contact.thanks': 'Gracias. Un miembro del equipo de HYDROPRIMA se pondrá en contacto en menos de 24 horas.'
+    'contact.thanks': 'Gracias. Un miembro del equipo de HYDROPRIMA le contactará en 24 horas.'
   },
   de: {
     'nav.home': 'STARTSEITE',
     'nav.solutions': 'LÖSUNGEN',
-    'nav.service': 'SERVICE',
+    'nav.service': 'DIENST',
     'nav.industries': 'BRANCHEN',
     'nav.about': 'ÜBER UNS',
     'nav.contact': 'KONTAKT',
-    'tagline': 'Wasser. Erhöht.',
-    'hero.title': 'Rein. Nachhaltige Perfektion.',
-    'hero.sub': 'Maßgeschneiderte Wasserfiltration und erstklassige Ausgabelösungen für die HORECA-Branche',
-    'cta.request': 'BERATUNG ANFRAGEN',
-    'cta.explore': 'UNSERE LÖSUNGEN',
+    'tagline': 'Wasser. Aufgewertet.',
+    'hero.title': 'Rein. Nachhaltig perfekt.',
+    'hero.sub': 'Maßgeschneiderte Wasserfiltration und hochwertige Spenderlösungen für die HORECA-Branche.',
+    'cta.request': 'BERATUNG ANFORDERN',
+    'cta.explore': 'UNSERE LÖSUNGEN ENTDECKEN',
     'difference.title': 'Der Unterschied ist der Service',
-    'difference.text': 'HYDROPRIMA kombiniert premium Geräte von vertrauenswürdigen Partnern mit einem spezialisierten Servicenetz, um den Betrieb am Laufen zu halten. Jede Anfrage erhält eine zeitnahe Antwort. Wir kümmern uns um Ihr Wasser, damit Sie sich um Ihre Gäste kümmern können.',
-    'solutions.title': 'Lösungen, die auf Ihren Betrieb abgestimmt sind',
-    'solutions.purchase': 'KAUF',
-    'solutions.purchase_text': 'Eigentum an Ihrer Ausstattung. Langfristige Investition mit professionellem Support.',
-    'solutions.rental': 'MIETE',
-    'solutions.rental_text': 'Premium-Ausstattung mit planbaren monatlichen Kosten.',
-    'solutions.bottles': 'FLASCHEN',
-    'solutions.bottles_text': 'Wiederverwendbare Glasflaschen, individualisierbar für Ihre Marke.',
-    'solutions.cta': 'KAUF ENTDECKEN',
-    'solutions.cta2': 'MIETE ENTDECKEN',
-    'solutions.cta3': 'FLASCHEN ENTDECKEN',
-    'service.title': 'Service ist keine Option. Es ist Teil der Lösung.',
-    'service.fast': 'BESCHLEUNIGTE ANTWORT',
+    'difference.text': 'HYDROPRIMA verbindet hochwertige Geräte bewährter Partner mit einem spezialisierten Servicenetz, damit Ihr Betrieb reibungslos läuft. Jede Anfrage erhält eine rechtzeitige Antwort.',
+    'solutions.title': 'Lösungen, die auf Ihren Betrieb zugeschnitten sind',
+    'service.title': 'Service ist keine Option. Er ist Teil der Lösung.',
+    'service.fast': 'SCHNELLSTRESPONSE',
     'service.fast_text': 'Jede Anfrage erhält eine zeitnahe Antwort. Wir kümmern uns um Ihr Wasser, damit Sie sich um Ihre Gäste kümmern können.',
     'service.network': 'SPEZIALISTENNETZ',
-    'service.network_text': 'Qualifizierte technische Spezialisten in den USA, Spanien und Deutschland.',
+    'service.network_text': 'Qualifizierte technische Spezialisten in den Vereinigten Staaten, Spanien und Deutschland.',
     'service.maintenance': 'WARTUNG',
-    'service.maintenance_text': 'Präventive und korrektive Wartung zum Schutz der Geräteleistung.',
-    'about.title': 'Auf Expertise gebaut. Um Service herum gestaltet.',
-    'about.text': 'HYDROPRIMA ist ein internationaler Distributor professioneller Wasserfiltrations- und -dispensierungsausrüstung von ausgewählten Technologiepartnern wie Blupura. Wir spezialisieren uns auf Premium-Hotellerie- und Gewerbeumgebungen und bieten Installation, Ersatzteile und fortlaufenden Experten-Support.',
-    'contact.title': 'Lassen Sie uns besprechen, wie wir gemeinsam die Hydrationsbedürfnisse Ihrer Gäste und Mitarbeiter verbessern können.',
-    'contact.sub': 'Erzählen Sie uns von Ihrem Unternehmen und unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden.',
-    'contact.cta': 'BERATUNG ANFRAGEN',
-    'contact.thanks': 'Danke. Ein Mitglied des HYDROPRIMA-Teams wird sich innerhalb von 24 Stunden bei Ihnen melden.'
+    'service.maintenance_text': 'Präventive und korrigierende Wartung zum Schutz der Geräteleistung.',
+    'about.title': 'Auf Expertise gebaut. Auf Service ausgerichtet.',
+    'about.text': 'HYDROPRIMA ist ein internationaler Distributor professioneller Wasserfiltrations- und Spendergeräte ausgewählter Technologiepartner. Wir spezialisieren uns auf hochwertige Lösungen für Gastronomie und kommerzielle Betriebe.',
+    'contact.title': 'Lassen Sie uns gemeinsam prüfen, wie wir Ihre Hydrationsbedürfnisse für Gäste und Mitarbeiter verbessern können',
+    'contact.sub': 'Erzählen Sie uns von Ihrem Unternehmen. Unser Team meldet sich innerhalb von 24 Stunden bei Ihnen.',
+    'contact.cta': 'BERATUNG ANFORDERN',
+    'contact.thanks': 'Vielen Dank. Ein Mitglied des HYDROPRIMA-Teams wird sich innerhalb von 24 Stunden bei Ihnen melden.'
   }
 };
 
-let currentLang = localStorage.getItem('hp_lang') || 'en';
+const currentLang = 'en';
 
-document.addEventListener('DOMContentLoaded', ()=>{
-  document.getElementById('year').textContent = new Date().getFullYear();
-  document.querySelectorAll('.lang-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>setLang(btn.dataset.lang));
-  });
-  setLang(currentLang);
-});
-
-function setLang(lang){
-  currentLang = lang;
-  localStorage.setItem('hp_lang', lang);
-  document.documentElement.lang = lang;
-  // translate elements
-  document.querySelectorAll('[data-i18n]').forEach(el=>{
+function applyTranslations(lang = currentLang) {
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
     const key = el.dataset.i18n;
-    const text = translations[lang] && translations[lang][key] ? translations[lang][key] : translations['en'][key] || '';
-    if(el.tagName.toLowerCase() === 'input' || el.tagName.toLowerCase() === 'textarea'){
-      el.placeholder = text;
-    } else {
-      el.textContent = text;
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
     }
   });
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  applyTranslations();
+
+  document.querySelectorAll('.lang-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const selected = btn.dataset.lang;
+      applyTranslations(selected);
+    });
+  });
+});
