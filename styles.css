@@ -1,7 +1,7 @@
 /* styles.css - refined premium styling with blue background gradient and improved readability */
 :root{
   --max:1100px;
-  --accent:#0b2a3a; /* used for CTAs */
+  --accent:#0b2a3a;
   --muted:rgba(255,255,255,0.9);
 }
 *{box-sizing:border-box}
@@ -11,14 +11,12 @@ body{
   line-height:1.5;
   color:var(--text, #ffffff);
   margin:0;
-  /* Gradient from dark navy (top) to light aqua (bottom) to suggest transition */
   background: linear-gradient(180deg, #001428 0%, #0b3a57 30%, #cfeff7 100%);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   position:relative;
   overflow-x:hidden;
 }
-/* large decorative background drops (subtle, behind content) */
 body::before{
   content:"";
   position:fixed;
@@ -39,7 +37,6 @@ body::before{
 .brand{display:flex;align-items:center;gap:18px}
 .logo-wrap{display:flex;align-items:center;justify-content:center}
 .logo{width:160px;height:auto;opacity:0.92;filter:drop-shadow(0 10px 28px rgba(2,10,18,0.25));transform:translateY(2px)}
-/* center the company name and tagline vertically under each other */
 .brand-text{display:flex;flex-direction:column;align-items:center;text-align:center}
 .company{font-weight:700;letter-spacing:.08em;color:#fff;font-size:20px}
 .tagline{font-size:13px;color:var(--muted);letter-spacing:.09em;margin-top:6px}
@@ -48,7 +45,6 @@ body::before{
 .lang-selector{margin-left:12px}
 .lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:6px 8px;border-radius:6px;margin-left:6px;color:#fff;cursor:pointer}
 .hero{padding:120px 0;position:relative;z-index:2}
-/* overlay to ensure hero text is always readable across the gradient */
 .hero::after{
   content:'';
   position:absolute;
@@ -64,46 +60,32 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .btn.primary{background:rgba(255,255,255,0.12);backdrop-filter:blur(6px);border:none}
 .section{padding:56px 0;position:relative;z-index:2}
 .section.dark{background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));color:#fff}
-/* ensure section text panels have subtle backing to avoid poor contrast when gradient changes */
 .section .container{background:linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.00));padding:0}
-/* difference section: make a distinct dark-blue band above the cards so the paragraph sits on a consistent dark background */
 .section#difference{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px}
 .section#difference .container{padding-top:8px;padding-bottom:8px}
 .section#difference p{color:rgba(255,255,255,0.96);line-height:1.6}
-/* service section: ensure the entire service block uses the same dark-blue band and light text (consistent with difference) */
 .section#service{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px}
 .section#service .container{padding-top:8px;padding-bottom:8px}
 .section#service h2{color:rgba(255,255,255,0.98)}
 .section#service .feature h4{color:rgba(255,255,255,0.96);margin:0 0 6px}
 .section#service .feature p{color:rgba(255,255,255,0.90);line-height:1.6}
 
-/* Solution cards with photo header and visible black CTAs */
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px;align-items:stretch}
-.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;height:100%;min-height:360px}
+.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;min-height:360px;height:100%}
 .card-photo{height:180px;background-size:cover;background-position:center;flex:0 0 auto}
 .card-content{padding:18px 20px 16px;display:flex;flex-direction:column;flex:1}
 .card-content h3{margin:0 0 10px;color:#042028;font-size:1.42rem;line-height:1.2;min-height:2.6em;display:flex;align-items:center}
 .card-content p{margin:0 0 14px;color:#153233;line-height:1.5;font-size:0.96rem;flex:1;display:flex;align-items:flex-start}
-
-/* Option buttons for Water Dispensers (explicit black text) */
 .card .btn.option{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:9px 12px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin-right:8px}
-
-/* Discover button kept for other cards */
 .card .btn.discover{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700;margin-top:auto}
-
-/* ensure buttons are fully opaque and visible even if global .btn sets color */
 .card .btn{opacity:1}
-
-/* homogeneous formatting for the three cards */
 .card .options{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
 .card .options .btn{margin-right:0}
 .card .btn.discover,
 .card .btn.option{align-self:flex-start}
 
-/* --- Contact block vertical position tweak --- */
 .contact-container{padding-top:96px;padding-bottom:48px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
 .section#contact .container.contact-container h2{margin:0 0 12px}
-
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
 .feature{background:transparent;color:rgba(255,255,255,0.95)}
 .contact-form{margin-top:18px}
@@ -113,4 +95,3 @@ input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06
 @media (max-width:960px){.card-photo{height:180px}.contact-container{padding-top:64px}}
 @media (max-width:760px){.topnav{display:none}.logo{width:130px}.card-photo{height:150px}.contact-container{padding-top:48px}}
 @media (max-width:480px){.card-photo{height:120px}.card{min-height:320px}}
-
