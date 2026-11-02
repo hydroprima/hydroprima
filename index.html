@@ -1,153 +1,116 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HYDROPRIMA — Pure, sustainable perfection.</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="brand">
-      <div class="logo-wrap">
-        <img src="assets/logo.svg" alt="HYDROPRIMA logo" class="logo">
-      </div>
-      <div class="brand-text">
-        <div class="company">HYDROPRIMA</div>
-        <div class="tagline" data-i18n="tagline">Water. Elevated.</div>
-      </div>
-    </div>
-    <nav class="topnav">
-      <a href="#home" data-i18n="nav.home">HOME</a>
-      <a href="#solutions" data-i18n="nav.solutions">SOLUTIONS</a>
-      <a href="#service" data-i18n="nav.service">SERVICE</a>
-      <a href="#industries" data-i18n="nav.industries">INDUSTRIES</a>
-      <a href="#about" data-i18n="nav.about">ABOUT</a>
-      <a href="#contact" data-i18n="nav.contact">CONTACT</a>
-      <div class="lang-selector" aria-label="Language selector">
-        <button class="lang-btn" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="es">ES</button>
-        <button class="lang-btn" data-lang="de">DE</button>
-      </div>
-    </nav>
-  </header>
+/* styles.css - refined premium styling with blue background gradient and improved readability */
+:root{
+  --max:1100px;
+  --accent:#0b2a3a; /* used for CTAs */
+  --muted:rgba(255,255,255,0.9);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+  line-height:1.5;
+  color:var(--text, #ffffff);
+  margin:0;
+  /* Gradient from dark navy (top) to light aqua (bottom) to suggest transition */
+  background: linear-gradient(180deg, #001428 0%, #0b3a57 30%, #cfeff7 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  position:relative;
+  overflow-x:hidden;
+}
+/* large decorative background drops (subtle, behind content) */
+body::before{
+  content:"";
+  position:fixed;
+  left:-6vw;
+  top:-10vh;
+  width:80vw;
+  height:120vh;
+  background-image:url('assets/bg-drops.svg');
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size:contain;
+  opacity:0.10;
+  pointer-events:none;
+  z-index:0;
+}
+.container{max-width:var(--max);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:28px 24px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);position:relative;z-index:3}
+.brand{display:flex;align-items:center;gap:18px}
+.logo-wrap{display:flex;align-items:center;justify-content:center}
+.logo{width:160px;height:auto;opacity:0.92;filter:drop-shadow(0 10px 28px rgba(2,10,18,0.25));transform:translateY(2px)}
+/* center the company name and tagline vertically under each other */
+.brand-text{display:flex;flex-direction:column;align-items:center;text-align:center}
+.company{font-weight:700;letter-spacing:.08em;color:#fff;font-size:20px}
+.tagline{font-size:13px;color:var(--muted);letter-spacing:.09em;margin-top:6px}
+.topnav{display:flex;align-items:center;gap:18px}
+.topnav a{color:rgba(255,255,255,0.98);text-decoration:none;font-size:14px}
+.lang-selector{margin-left:12px}
+.lang-btn{background:transparent;border:1px solid rgba(255,255,255,0.12);padding:6px 8px;border-radius:6px;margin-left:6px;color:#fff;cursor:pointer}
+.hero{padding:120px 0;position:relative;z-index:2}
+/* overlay to ensure hero text is always readable across the gradient */
+.hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,6,10,0.6) 0%, rgba(0,6,10,0.45) 30%, rgba(255,255,255,0.02) 100%);
+  pointer-events:none;
+  z-index:1;
+}
+.hero-inner{max-width:900px;margin:0 auto;padding:0 24px;position:relative;z-index:2}
+h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;text-shadow:0 6px 30px rgba(2,10,18,0.45)}
+.lead{color:rgba(255,255,255,0.95);font-size:18px;margin:0 0 20px;text-shadow:0 4px 18px rgba(2,10,18,0.35)}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:transparent;color:#fff;text-decoration:none}
+.btn.primary{background:rgba(255,255,255,0.12);backdrop-filter:blur(6px);border:none}
+.section{padding:56px 0;position:relative;z-index:2}
+.section.dark{background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));color:#fff}
+/* ensure section text panels have subtle backing to avoid poor contrast when gradient changes */
+.section .container{background:linear-gradient(180deg, rgba(255,255,255,0.00), rgba(255,255,255,0.00));padding:0}
+/* difference section: make a distinct dark-blue band above the cards so the paragraph sits on a consistent dark background */
+.section#difference{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px}
+.section#difference .container{padding-top:8px;padding-bottom:8px}
+.section#difference p{color:rgba(255,255,255,0.96);line-height:1.6}
+/* service section: ensure the entire service block uses the same dark-blue band and light text (consistent with difference) */
+.section#service{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px}
+.section#service .container{padding-top:8px;padding-bottom:8px}
+.section#service h2{color:rgba(255,255,255,0.98)}
+.section#service .feature h4{color:rgba(255,255,255,0.96);margin:0 0 6px}
+.section#service .feature p{color:rgba(255,255,255,0.90);line-height:1.6}
 
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-inner">
-        <h1 data-i18n="hero.title">Pure, sustainable perfection.</h1>
-        <p class="lead" data-i18n="hero.sub">Tailored water filtration and premium dispensing solutions for the HORECA industry.</p>
-        <div class="hero-ctas">
-          <a class="btn primary" href="#contact" data-i18n="cta.request">REQUEST A CONSULTATION</a>
-          <a class="btn" href="#solutions" data-i18n="cta.explore">EXPLORE OUR SOLUTIONS</a>
-        </div>
-      </div>
-    </section>
+/* Solution cards with photo header and visible black CTAs */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px;align-items:stretch}
+.card{background:rgba(255,255,255,0.96);border-radius:12px;overflow:hidden;color:#042028;box-shadow:0 6px 20px rgba(2,10,18,0.08);display:flex;flex-direction:column;min-height:360px;height:100%}
+.card-photo{height:180px;background-size:cover;background-position:center;flex:0 0 auto}
+.card-content{padding:18px 20px 16px;display:flex;flex-direction:column;flex:1}
+.card-content h3{margin:0 0 10px;color:#042028;font-size:1.42rem;line-height:1.2;min-height:2.6em;display:flex;align-items:center}
+.card-content p{margin:0 0 14px;color:#153233;line-height:1.5;font-size:0.96rem;flex:1;display:flex;align-items:flex-start}
 
-    <section id="difference" class="section">
-      <div class="container">
-        <h2 data-i18n="difference.title">The difference is service</h2>
-        <p data-i18n="difference.text">HYDROPRIMA combines premium equipment from trusted partners with a specialist service network to keep operations running. Every inquiry receives a timely response from our team.</p>
-      </div>
-    </section>
+/* Option buttons for Water Dispensers (explicit black text) */
+.card .btn.option{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:9px 12px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin-right:8px}
 
-    <section id="solutions" class="section">
-      <div class="container">
-        <h2 data-i18n="solutions.title">Solutions designed around your operation</h2>
+/* Discover button kept for other cards */
+.card .btn.discover{background:#ffffff;color:#000000;border:1px solid rgba(0,0,0,0.08);padding:10px 14px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:700;margin-top:auto}
 
-        <div class="cards">
-          <div class="card card-dispensers">
-            <div class="card-photo" style="background-image:url('assets/images/gene-gallin-pe5a9RehVeg-unsplash.jpg');" aria-hidden="true"></div>
-            <div class="card-content">
-              <img src="image_aacba005.jpg" alt="Water Dispensers" style="display:block;width:100%;height:220px;object-fit:cover;border-radius:12px;margin-bottom:1rem;">
-              <h3>Water Dispensers</h3>
-              <p>Premium water solutions designed to elevate the guest experience while delivering operational simplicity and sustainability.</p>
-              <div class="options">
-                <a class="btn option" href="#water-dispensers-commercial">COMMERCIAL</a>
-                <a class="btn option" href="#water-dispensers-residential">RESIDENTIAL</a>
-              </div>
-            </div>
-          </div>
+/* ensure buttons are fully opaque and visible even if global .btn sets color */
+.card .btn{opacity:1}
 
-          <div class="card card-bottles">
-            <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-            <div class="card-content">
-              <h3>Custom Glass Bottles</h3>
-              <p>Reusable glass bottle personalised for your brand enhancing the presentation of premium still and sparkling water requires a deliberate blend of visual language, intentional hardware details, and an elevated guest experience.</p>
-              <a class="btn discover" href="#contact">DISCOVER GLASS BOTTLES</a>
-            </div>
-          </div>
+/* homogeneous formatting for the three cards */
+.card .options{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.card .options .btn{margin-right:0}
+.card .btn.discover,
+.card .btn.option{align-self:flex-start}
 
-          <div class="card card-service">
-            <div class="card-photo" style="background-image:url('https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1600&q=80');" aria-hidden="true"></div>
-            <div class="card-content">
-              <h3>Service</h3>
-              <p>Your premier partner for all service and maintenance needs. Fast, effective, and reliable.</p>
-              <a class="btn discover" href="#contact">DISCOVER SERVICE</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+/* --- Contact block vertical position tweak --- */
+.contact-container{padding-top:96px;padding-bottom:48px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
+.section#contact .container.contact-container h2{margin:0 0 12px}
 
-    <section id="service" class="section dark">
-      <div class="container">
-        <h2 data-i18n="service.title">Service is not an option. It is part of the solution.</h2>
-        <div class="features">
-          <div class="feature">
-            <h4 data-i18n="service.fast">EXPEDITED RESPONSE</h4>
-            <p data-i18n="service.fast_text">Every inquiry receives a timely response. We take care of your water while you take care of your guests.</p>
-          </div>
-          <div class="feature">
-            <h4 data-i18n="service.network">SPECIALIST NETWORK</h4>
-            <p data-i18n="service.network_text">Qualified technical specialists across the United States, Spain and Germany.</p>
-          </div>
-          <div class="feature">
-            <h4 data-i18n="service.maintenance">MAINTENANCE</h4>
-            <p data-i18n="service.maintenance_text">Preventive and corrective maintenance to protect equipment performance.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.feature{background:transparent;color:rgba(255,255,255,0.95)}
+.contact-form{margin-top:18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06);border-radius:8px}
+.site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
+@media (max-width:960px){.card-photo{height:180px}.contact-container{padding-top:64px}}
+@media (max-width:760px){.topnav{display:none}.logo{width:130px}.card-photo{height:150px}.contact-container{padding-top:48px}}
+@media (max-width:480px){.card-photo{height:120px}.card{min-height:320px}}
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2 data-i18n="about.title">Built around expertise. Designed around service.</h2>
-        <p data-i18n="about.text">HYDROPRIMA is an international distributor of professional water filtration and dispensing equipment from selected technology partners such as Blupura. We specialize in building reliable hydration systems for hospitality, foodservice, and premium commercial operations.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container contact-container">
-        <h2 data-i18n="contact.title">Let's review how we can work together to elevate your hydration needs for your guests and staff</h2>
-        <p data-i18n="contact.sub">Tell us about your business and our team will get back to you within 24 hours.</p>
-        <form class="contact-form" onsubmit="event.preventDefault(); alert(translations[currentLang]['contact.thanks']);">
-          <div class="grid">
-            <input name="first" placeholder="First name" required>
-            <input name="last" placeholder="Last name" required>
-            <input name="company" placeholder="Company" required>
-            <input name="position" placeholder="Position">
-            <select name="country" required>
-              <option value="US">United States</option>
-              <option value="ES">Spain</option>
-              <option value="DE">Germany</option>
-            </select>
-            <input name="email" placeholder="Email" type="email" required>
-          </div>
-          <textarea name="message" placeholder="Message" rows="5"></textarea>
-          <div style="margin-top:16px">
-            <button class="btn primary" type="submit" data-i18n="contact.cta">REQUEST A CONSULTATION</button>
-          </div>
-        </form>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">HYDROPRIMA — United States | Spain | Germany — <span id="year"></span></div>
-  </footer>
-
-  <script src="scripts.js"></script>
-</body>
-</html>
