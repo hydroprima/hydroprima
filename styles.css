@@ -84,14 +84,30 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .card .btn.discover,
 .card .btn.option{align-self:flex-start}
 
+.section#contact{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);padding-top:48px;padding-bottom:48px;color:#fff}
+.section#contact .container{padding-top:8px;padding-bottom:8px}
+.section#contact h2,
+.section#contact p,
+.section#contact .contact-form,
+.section#contact .contact-form input,
+.section#contact .contact-form select,
+.section#contact .contact-form textarea,
+.section#contact .contact-form button{color:#fff}
+.section#contact .contact-form input,
+.section#contact .contact-form select,
+.section#contact .contact-form textarea{background:#ffffff;color:#042028;border:1px solid rgba(255,255,255,0.12)}
+.section#contact .contact-form input::placeholder,
+.section#contact .contact-form textarea::placeholder{color:rgba(4,32,40,0.7)}
+
 .contact-container{padding-top:96px;padding-bottom:48px;min-height:300px;display:flex;flex-direction:column;justify-content:flex-end}
 .section#contact .container.contact-container h2{margin:0 0 12px}
+
 .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
 .feature{background:transparent;color:rgba(255,255,255,0.95)}
 .contact-form{margin-top:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
 input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06);border-radius:8px}
-.site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
+.site-footer{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
 @media (max-width:960px){.card-photo{height:180px}.contact-container{padding-top:64px}}
 @media (max-width:760px){.topnav{display:none}.logo{width:130px}.card-photo{height:150px}.contact-container{padding-top:48px}}
 @media (max-width:480px){.card-photo{height:120px}.card{min-height:320px}}
