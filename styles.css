@@ -106,6 +106,8 @@ h1{font-size:clamp(32px,6vw,56px);margin:0 0 12px;color:#fff;font-weight:700;tex
 .feature{background:transparent;color:rgba(255,255,255,0.95)}
 .contact-form{margin-top:18px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.grid + textarea,
+textarea{margin-top:10px;display:block}
 input,select,textarea{width:100%;padding:12px;border:1px solid rgba(2,10,18,0.06);border-radius:8px}
 .site-footer{background:linear-gradient(180deg, #001428 0%, #0b3a57 100%);border-top:1px solid rgba(255,255,255,0.06);padding:28px 0;text-align:center;color:rgba(255,255,255,0.85);position:relative;z-index:2}
 @media (max-width:960px){.card-photo{height:180px}.contact-container{padding-top:64px}}
